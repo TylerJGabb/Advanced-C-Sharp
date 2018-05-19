@@ -1,11 +1,5 @@
 ﻿This is an exersise for Generic classes. I have to come up with this so it might take me a while.
 
-1) Write a generic method to find the maximum element in the range [begin, end) where begin and end are
-generic types which are IComparable
-
-2) Write a generic method to exchange the positions of two different elements in an array
-public void Exchange<T>(T[] arr, int pos1, int pos2)
-
-3) Write a Set class. This set can contain elements of type T. These types can be IComparable
+Write a Set class. This set can contain elements of type T. These types can be IComparable
 
 

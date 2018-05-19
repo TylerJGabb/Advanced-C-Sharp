@@ -8,5 +8,12 @@ namespace Main_Project
         {
             return product.Price;
         }
+
+        public static void Demo()
+        {
+            //since book inherits from product we our generic type can be a book
+            var calc1 = new DiscountCalculator<Product>();
+            var calc2 = new DiscountCalculator<Book>();   
+        }
     }
 }

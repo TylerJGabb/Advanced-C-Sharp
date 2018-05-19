@@ -42,6 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Delegates\Photo.cs" />
+    <Compile Include="Delegates\PhotoFilters.cs" />
+    <Compile Include="Delegates\PhotoProcessor.cs" />
     <Compile Include="Generics\Book.cs" />
     <Compile Include="Generics\Exersise\Set.cs" />
     <Compile Include="Generics\Product.cs" />
@@ -57,5 +60,6 @@
   <ItemGroup>
     <Content Include="Generics\Exersise\Exersize.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

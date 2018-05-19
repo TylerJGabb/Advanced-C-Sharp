@@ -9,38 +9,57 @@ namespace Main_Project.Generics.Exersise
 {
     public class Set<T> where T : IComparable
     {
-        private List<T> _collection;
-
-        public List<T> Items => _collection;
+        public List<T> Items { get; }
 
         public Set()
         {
-            _collection = new List<T>();
+            Items = new List<T>();
         }
 
         public Set(IEnumerable<T> numbers)
         {
-            _collection = numbers.Distinct().ToList();
+            Items = numbers.Distinct().ToList();
         }
 
         public void Add(T item)
         {
-            if(!_collection.Contains(item))
-                _collection.Add(item);
+            if(!Items.Contains(item))
+                Items.Add(item);
         }
 
         public Set<T> IntersectWith(Set<T> other)
         {
-            var intersection = _collection.Where(i => other._collection.Contains(i));
+            var intersection = Items.Where(i => other.Items.Contains(i));
             return new Set<T>(intersection);
         }
 
         public Set<T> UnionWith(Set<T> other)
         {
             var union = new List<T>();
-            union.AddRange(_collection);
-            union.AddRange(other._collection);
+            union.AddRange(Items);
+            union.AddRange(other.Items);
             return new Set<T>(union.Distinct());
+        }
+
+        public static void Demo()
+        {
+            var s1 = new Set<int>();
+            var s2 = new Set<int>();
+
+            s1.Add(1);
+            s1.Add(1);
+            s1.Add(4);
+            s2.Add(5);
+            s2.Add(4);
+            s2.Add(3);
+
+            var union = s1.UnionWith(s2);
+            union.Items.Sort();
+
+            var intersection = s1.IntersectWith(s2);
+
+            Console.WriteLine("union: " + string.Join(",", union.Items));
+            Console.WriteLine($"intersection: {string.Join(",", intersection.Items)}");
         }
     }
 }
