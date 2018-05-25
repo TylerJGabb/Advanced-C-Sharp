@@ -1,0 +1,2 @@
+﻿THis is a file with ideas for a project involving delegates. 
+

@@ -13,7 +13,7 @@ namespace Main_Project.Delegates
         public void Process(string photoPath, PhotoFilterHandler filterHandler)
         {
             var photo = new Photo(photoPath);
-            filterHandler(photo); //this executes the group of functions pointed to by the delegate on the photo
+            filterHandler(photo); //this executes the group of functions pointed to by the delegat
             //so long as they have the signature defined above
         }
 
@@ -21,8 +21,7 @@ namespace Main_Project.Delegates
         {
             var processor = new PhotoProcessor();
             var filters = new PhotoFilters();
-            PhotoFilterHandler handler;
-            handler = filters.ApplyContrast;
+            PhotoFilterHandler handler = filters.ApplyContrast;
             handler += filters.AdjustBrightness;
             handler += SomeOtherFilter;
             processor.Process("123.jpg", handler);
