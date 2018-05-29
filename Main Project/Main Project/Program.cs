@@ -7,6 +7,7 @@ using Main_Project.Delegates;
 using Main_Project.Delegates.Expression;
 using Main_Project.Delegates.LambdaExpressions;
 using Main_Project.Events;
+using Main_Project.ExtensionMethods;
 using Main_Project.Generics.Exersise;
 
 namespace Main_Project
@@ -15,7 +16,7 @@ namespace Main_Project
     {
         static void Main(string[] args)
         {
-            VideoEncoder.Demo();
+            ExtensionsDemo.Demo();
         }
     }
 }

@@ -54,6 +54,8 @@
     <Compile Include="Events\Video.cs" />
     <Compile Include="Events\VideoEncoder.cs" />
     <Compile Include="Events\VideoEventArgs.cs" />
+    <Compile Include="ExtensionMethods\ExtensionsDemo.cs" />
+    <Compile Include="ExtensionMethods\StringExtensions.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
